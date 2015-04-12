@@ -1,5 +1,3 @@
-require 'pry'
-
 class Bag
   attr_reader :count, :candies
 
@@ -38,12 +36,4 @@ class Bag
     @count -= @taken_candies.size
     return @taken_candies
   end
-
 end
-
-
-
-# bag = Bag.new
-# bag << Candy.new("Lindt chocolate")
-
-# bag.contains?("Hershey's chocolate")

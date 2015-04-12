@@ -87,12 +87,11 @@ class BagTest < Minitest::Test
   end
 
   def test_take_one_candy
-    skip
     bag = Bag.new
     bag << Candy.new("Lifesavers")
 
     candy = bag.take(1)
     assert_equal "Lifesavers", candy.first.type
+    assert_equal 100, candy.last.sugar
   end
 end
-
