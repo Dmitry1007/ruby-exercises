@@ -81,8 +81,9 @@ class BagTest < Minitest::Test
     assert_equal 3, bag.count
 
     taken = bag.take(2)
-    # assert_equal 2, taken.size
-    # assert_equal 1, bag.count
+ 
+    assert_equal 2, taken.size
+    assert_equal 1, bag.count
   end
 
   def test_take_one_candy

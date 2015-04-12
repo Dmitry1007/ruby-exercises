@@ -1,23 +1,16 @@
-require_relative '../lib/candy'
 require 'pry'
 
 class Bag
+  attr_reader :count, :candies
 
   def initialize
     @candies = []
     @count = 0
+    @taken_candies = []
   end
 
   def empty?
     @candies.size == 0
-  end
-
-  def count
-    @count
-  end
-
-  def candies
-    @candies
   end
 
   def <<(candy)
@@ -38,12 +31,12 @@ class Bag
     @candies[0].type
   end
 
-  def take(num)
-    @candies.pop 
-  end
-
-  def size
-    
+  def take(num) 
+    num.times do
+      @taken_candies << @candies.pop
+    end
+    @count -= @taken_candies.size
+    return @taken_candies
   end
 
 end
