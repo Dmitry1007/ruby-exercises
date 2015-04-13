@@ -6,7 +6,6 @@ class Adult
 
   def sober?
     @beverages_consumed < 3
-    
   end
 
   def consume_an_alcoholic_beverage
