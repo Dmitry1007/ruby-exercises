@@ -5,5 +5,4 @@ class Product
     @type = type
     @cost = cost
   end
-
 end

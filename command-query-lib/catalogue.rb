@@ -9,11 +9,8 @@ class Catalogue
   end
 
   def cheapest
-    if @catalogue.empty?
-      nil
-    else
-      @catalogue[-1].type
-    end
+    cheapo = @catalogue.min_by { |obj| obj.cost }
+    cheapo.type if cheapo # is not equal to nil
   end
 
 end
