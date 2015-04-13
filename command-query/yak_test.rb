@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
-require 'minitest/pride'
-require_relative 'yak'
+# require 'minitest/pride'
+require_relative '../command-query-lib/yak'
 
 class YakTest < Minitest::Test
   def test_yak_is_hairy
@@ -10,7 +10,6 @@ class YakTest < Minitest::Test
   end
 
   def test_shave_the_yak
-    skip
     yak = Yak.new
     yak.shave
     refute yak.hairy?, "The shaven yak is no longer hairy."

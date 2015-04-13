@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
-require 'minitest/pride'
-require_relative 'money'
+# require 'minitest/pride'
+require_relative '../command-query-lib/money'
 
 class MoneyTest < Minitest::Test
   def test_money_starts_at_zero
@@ -10,7 +10,6 @@ class MoneyTest < Minitest::Test
   end
 
   def test_earn_money
-    skip
     money = Money.new
     money.earn(20)
     assert_equal 20, money.amount
@@ -19,7 +18,6 @@ class MoneyTest < Minitest::Test
   end
 
   def test_spend_money
-    skip
     money = Money.new
     money.earn(50)
     money.spend(12)
